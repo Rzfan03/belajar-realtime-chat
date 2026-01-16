@@ -5,13 +5,13 @@ import { FiSend } from "react-icons/fi";
 const App = () => {
   const [listData, setDataList] = useState([]);
   const [chatValue, setChat] = useState("");
-  
+  const domain = "https://chatting-simple.vercel.app/"
   
   const handleSend = async () => {
     
     if(!chatValue) return alert("input tak boleh kosong!")
     
-    const Api = await fetch("http://localhost:3000/", {
+    const Api = await fetch(domain, {
       method: "POST",
       headers: {
         "Content-Type": "application/json"
@@ -25,7 +25,7 @@ const App = () => {
   }
   
   const getData = async () => {
-    const Api = await fetch("http://localhost:3000/");
+    const Api = await fetch(domain);
     const datas = await Api.json();
     console.log(datas.getData.data)
     setDataList(datas.getData.data)

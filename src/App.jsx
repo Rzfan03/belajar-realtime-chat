@@ -5,7 +5,7 @@ import { FiSend } from "react-icons/fi";
 const App = () => {
   const [listData, setDataList] = useState([]);
   const [chatValue, setChat] = useState("");
-  const domain = "https://chatting-simple.vercel.app/"
+  const domain = "/api"
   
   const handleSend = async () => {
     

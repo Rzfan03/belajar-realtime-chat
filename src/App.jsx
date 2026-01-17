@@ -48,9 +48,9 @@ const App = () => {
   return (
     <div className="min-h-screen flex flex-col justify-center items-center">
       <div className="min-h-screen gap-2 flex flex-col justify-center">
-        <div className="overflow-scroll mt-8 flex flex-col gap-2">
+        <div className="mt-8 flex flex-col gap-2">
           {listData.map((data) => (
-            <div className="w-fit overflow-scroll  flex flex-col items-start px-4 py-2 rounded-r-lg rounded-b-lg text-white text-md text-md bg-blue-500 inset-shadow-sm inset-shadow-blue-300" key={data.id}>
+            <div className="w-fit flex flex-col items-start px-4 py-2 rounded-r-lg rounded-b-lg text-white text-md text-md bg-blue-500 inset-shadow-sm inset-shadow-blue-300" key={data.id}>
               <h1 className="max-md:text-sm">{data.chat}</h1>
               <span className="text-sm">{new Date(data.post_at).toLocaleDateString('id-ID', { hour: '2-digit', minute: '2-digit', hour12: false })}</span>
             </div>
